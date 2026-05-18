@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FaTelegram } from 'react-icons/fa';
 import dino1 from '../../assets/dinos/dino1.png';
 import dino2 from '../../assets/dinos/dino2.png';
 import dino3 from '../../assets/dinos/dino3.png';
@@ -12,10 +13,10 @@ import './Footer.css';
 
 export const Footer = () => {
   const socials = [
-    { icon: FiGithub, label: 'GitHub', href: '#' },
-    { icon: FiLinkedin, label: 'LinkedIn', href: '#' },
-    { icon: FiTwitter, label: 'Twitter', href: '#' },
-    { icon: FiMail, label: 'Email', href: 'mailto:hello@example.com' },
+    { icon: FiGithub, label: 'GitHub', href: 'https://github.com/MaoMonioudom' },
+    { icon: FiLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/mao-monioudom-a1b7193a7' },
+    { icon: FaTelegram, label: 'Telegram', href: 'https://t.me/Moni_coconut' },
+    { icon: FiMail, label: 'Email', href: 'https://mail.google.com/mail/u/0/?hl=en#inbox?compose=XBcJlCFWZpzZMHZlcgSLVdBHQZzNjxDkXGdffXbFsqMFGVzHHHMSGHgclxcqKPhgJzWZngXJLSFVCGXQ' },
   ];
 
   const containerVariants = {
@@ -60,6 +61,8 @@ export const Footer = () => {
                 whileHover={{ scale: 1.2, rotate: 8 }}
                 whileTap={{ scale: 0.9 }}
                 title={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Icon size={24} />
               </motion.a>
