@@ -1,0 +1,347 @@
+.projects {
+  position: relative;
+
+  padding: 8rem 0;
+
+  overflow: hidden;
+}
+
+/* MAIN CONTAINER (NO BACKGROUND / NO BLUR) */
+.projects .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* TITLE */
+.projects .title {
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+}
+
+/* PROJECT CARD */
+.card {
+  position: relative;
+
+  padding: 2rem;
+
+  background: rgba(20,20,20,0.6);
+
+  border: 2px dashed rgba(255,255,255,0.15);
+
+  border-radius: 16px;
+
+  transform: rotate(var(--tilt, -1deg));
+
+  box-shadow: none;
+
+  transition: transform 0.3s ease;
+}
+
+/* hand-drawn uneven feel */
+.card:nth-child(odd) {
+  --tilt: -1.5deg;
+}
+
+.card:nth-child(even) {
+  --tilt: 1.2deg;
+}
+
+.card:hover {
+  transform: translateY(-8px) rotate(0deg);
+}
+
+/* TOP LEFT TAPE */
+.card::before {
+  left: 15px;
+}
+
+/* TOP RIGHT TAPE */
+.card::after {
+  right: 15px;
+
+  transform: rotate(6deg);
+}
+
+
+/* RANDOM STICKY TILT VARIATION */
+.card:nth-child(1) { --tilt: -2deg; }
+.card:nth-child(2) { --tilt: 1.5deg; }
+.card:nth-child(3) { --tilt: -1deg; }
+.card:nth-child(4) { --tilt: 2deg; }
+
+/* HOVER = LIFTED NOTE */
+.card:hover {
+  transform: translateY(-10px) rotate(0deg);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.6);
+}
+
+/* .card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+} */
+
+/* IMAGE AREA */
+.imageContainer {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px dashed rgba(255,255,255,0.2);
+
+  border-radius: 14px;
+
+  transform: rotate(-3deg);
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+.cardTitle {
+  position: relative;
+
+  font-family: 'Fredoka', sans-serif;
+
+  display: inline-block;
+}
+
+/* hand-drawn underline */
+.cardTitle::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 100%;
+  height: 3px;
+
+  background: rgba(255,255,255,0.2);
+
+  transform: rotate(-1deg);
+}
+
+/* DESCRIPTION */
+.card .description {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+
+  margin-bottom: 1rem;
+
+  line-height: 1.6;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+
+  padding: 0.35rem 0.7rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: var(--muted);
+
+  transform: rotate(-1deg);
+
+  transition: 0.2s ease;
+}
+
+.tag:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  color: var(--text);
+}
+
+/* FOOTER LINKS */
+.footer {
+  display: flex;
+
+  gap: 1rem;
+
+  justify-content: flex-end;
+}
+
+.link {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: var(--text);
+
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ===== DINOS ===== */
+
+.projects .dino1 {
+  top: 5%;
+  left: 2%;
+
+  width: 80px;
+
+  opacity: 0.5;
+}
+
+.projects .dino2 {
+  bottom: 5%;
+
+  right: 3%;
+
+  width: 90px;
+
+  opacity: 0.5;
+}
+
+.projects .dino3 {
+  top: 30%;
+
+  left: -2%;
+
+  width: 85px;
+
+  opacity: 0.4;
+}
+
+.projects .dino4 {
+  top: 60%;
+
+  right: -2%;
+
+  width: 80px;
+
+  opacity: 0.4;
+}
+
+.projects .dino5 {
+  top: 15%;
+
+  right: 20%;
+
+  width: 75px;
+
+  opacity: 0.45;
+}
+
+.projects .dino6 {
+  bottom: 20%;
+
+  left: 15%;
+
+  width: 90px;
+
+  opacity: 0.45;
+}
+
+.projects .dino7 {
+  bottom: 40%;
+
+  right: 25%;
+
+  width: 70px;
+
+  opacity: 0.4;
+}
+
+/* BACKGROUND GLOW ONLY (NO BLUR CONTAINER) */
+.projects::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(circle,
+    rgba(255,255,255,0.03),
+    transparent 70%);
+
+  top: -10%;
+  right: -10%;
+
+  z-index: 0;
+}
+
+.projects::after {
+  content: '';
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: radial-gradient(circle,
+    rgba(216,177,109,0.05),
+    transparent 70%);
+
+  bottom: -10%;
+  left: -10%;
+
+  z-index: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .imageContainer {
+    width: 60px;
+    height: 60px;
+  }
+}
