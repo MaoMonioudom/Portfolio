@@ -28,6 +28,7 @@ export const Hero = () => {
     },
   };
 
+
   return (
     <section className="hero" id="home">
       <motion.div
@@ -56,16 +57,15 @@ export const Hero = () => {
             className="primaryBtn"
             whileHover={{ scale: 1.05, rotate: -2 }}
             whileTap={{ scale: 0.95 }}
-          >
-            Click Me!
+          ><a href="#projects">Click Me!</a>
+            
           </motion.button>
           
           <motion.button
             className="secondaryBtn"
             whileHover={{ scale: 1.05, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
-          >
-            Hehe
+          ><a href="#contact">Hehe</a>
           </motion.button>
         </motion.div>
       </motion.div>
