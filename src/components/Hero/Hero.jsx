@@ -38,7 +38,7 @@ export const Hero = () => {
         animate="visible"
       >
         <motion.h1 className="title" variants={itemVariants}>
-          Heyy!! 😆
+          Heyy!! {"> <"}
         </motion.h1>
         
         <motion.p className="subtitle" variants={itemVariants}>

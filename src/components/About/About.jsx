@@ -12,10 +12,10 @@ import './About.css';
 
 export const About = () => {
   const skills = [
-    { icon: '🎨', label: 'Design', items: ['UI/UX', 'Figma', 'Adobe XD'] },
-    { icon: '⚛️', label: 'Frontend', items: ['React', 'JavaScript', 'CSS'] },
-    { icon: '✨', label: 'Animation', items: ['Framer Motion', 'CSS Animations', 'Interaction'] },
-    { icon: '📱', label: 'Responsive', items: ['Mobile First', 'Cross-browser', 'Performance'] },
+    { icon: '(T0T)', label: 'Design', items: ['UI/UX', 'Figma', 'Adobe XD'] },
+    { icon: '(>< p)', label: 'Frontend', items: ['React', 'JavaScript', 'CSS'] },
+    { icon: '(T - T)', label: 'Animation', items: ['Framer Motion', 'CSS Animations', 'Interaction'] },
+    { icon: '(> <)', label: 'Responsive', items: ['Mobile First', 'Cross-browser', 'Performance'] },
   ];
 
   const containerVariants = {
@@ -41,11 +41,11 @@ export const About = () => {
         variants={containerVariants}
       >
         <motion.h2 className="title" variants={itemVariants}>
-          😶‍🌫️Common, I'm shy!!
+          {"> <"}Common, I'm shy!!
         </motion.h2>
 
         <motion.p className="description" variants={itemVariants}>
-          Even I mentioned that I love development, But I'm actually a Data science Stduent though 😫
+          Even I mentioned that I love development, But I'm actually a Data science Stduent though
         </motion.p>
 
         <motion.div className="skills" variants={containerVariants}>

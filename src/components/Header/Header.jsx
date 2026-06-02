@@ -12,8 +12,8 @@ export const Header = () => {
   const navItems = [
     { label: 'Say Hi', id: 'home' },
     { label: 'Click Me!', id: 'projects' },
-    { label: 'Yo! Stop', id: 'about' },
-    { label: 'Always Here for You!', id: 'contact' },
+    { label: 'Yo! Stop><', id: 'about' },
+    { label: 'Always Here 4U', id: 'contact' },
   ];
 
   const containerVariants = {
